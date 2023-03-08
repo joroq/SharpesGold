@@ -1,0 +1,56 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E0B8380B-E836-4E72-B931-C2C61C185499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpesGold.Logic", "src\SharpesGold.Logic\SharpesGold.Logic.csproj", "{45A47B1F-4D26-4893-BB77-E0739E5CC3B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpesGold.Maps", "src\SharpesGold.Maps\SharpesGold.Maps.csproj", "{6D6D4966-6D43-4E59-8B82-0BFBCEBEE43C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpesGold.Neighbours", "src\SharpesGold.Neighbours\SharpesGold.Neighbours.csproj", "{50297604-D5F3-4BB0-B28A-27A879D8017A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F5573D5E-CD0D-4319-ADF6-E05BC0AB56B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpesGold.Maps.Tests", "test\SharpesGold.Maps.Tests\SharpesGold.Maps.Tests.csproj", "{03D1C0CA-E9D6-4C32-8EDF-07AA651040F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpesGold.Neighbours.Tests", "test\SharpesGold.Neighbours.Tests\SharpesGold.Neighbours.Tests.csproj", "{51F70143-133A-4588-A970-1D59E3BAE8BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45A47B1F-4D26-4893-BB77-E0739E5CC3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A47B1F-4D26-4893-BB77-E0739E5CC3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A47B1F-4D26-4893-BB77-E0739E5CC3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A47B1F-4D26-4893-BB77-E0739E5CC3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6D4966-6D43-4E59-8B82-0BFBCEBEE43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6D4966-6D43-4E59-8B82-0BFBCEBEE43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6D4966-6D43-4E59-8B82-0BFBCEBEE43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6D4966-6D43-4E59-8B82-0BFBCEBEE43C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50297604-D5F3-4BB0-B28A-27A879D8017A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50297604-D5F3-4BB0-B28A-27A879D8017A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50297604-D5F3-4BB0-B28A-27A879D8017A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50297604-D5F3-4BB0-B28A-27A879D8017A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D1C0CA-E9D6-4C32-8EDF-07AA651040F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D1C0CA-E9D6-4C32-8EDF-07AA651040F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D1C0CA-E9D6-4C32-8EDF-07AA651040F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D1C0CA-E9D6-4C32-8EDF-07AA651040F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F70143-133A-4588-A970-1D59E3BAE8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F70143-133A-4588-A970-1D59E3BAE8BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F70143-133A-4588-A970-1D59E3BAE8BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F70143-133A-4588-A970-1D59E3BAE8BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{45A47B1F-4D26-4893-BB77-E0739E5CC3B6} = {E0B8380B-E836-4E72-B931-C2C61C185499}
+		{6D6D4966-6D43-4E59-8B82-0BFBCEBEE43C} = {E0B8380B-E836-4E72-B931-C2C61C185499}
+		{50297604-D5F3-4BB0-B28A-27A879D8017A} = {E0B8380B-E836-4E72-B931-C2C61C185499}
+		{03D1C0CA-E9D6-4C32-8EDF-07AA651040F9} = {F5573D5E-CD0D-4319-ADF6-E05BC0AB56B8}
+		{51F70143-133A-4588-A970-1D59E3BAE8BD} = {F5573D5E-CD0D-4319-ADF6-E05BC0AB56B8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharpesGold.Maps\SharpesGold.Maps.csproj" />
+    <ProjectReference Include="..\SharpesGold.Logic\SharpesGold.Logic.csproj" />
+    <ProjectReference Include="..\SharpesGold.Neighbours\SharpesGold.Neighbours.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+</Project>
