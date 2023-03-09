@@ -12,7 +12,7 @@ public class MapTests
     public void SanityTest()
     {
         SharpesMaps maps = new SharpesMaps();
-        Assert.That(maps.GetCount(), Is.EqualTo(3));
+        Assert.That(maps.GetCount(), Is.EqualTo(4));
         Assert.That(maps.GetName(1), Is.EqualTo("Second hello world a bit longer"));
         Assert.That(maps.GetObstacle(0, 0, 0), Is.EqualTo(0));
         Assert.That(maps.GetObstacle(0, 0, 1), Is.EqualTo(1));
