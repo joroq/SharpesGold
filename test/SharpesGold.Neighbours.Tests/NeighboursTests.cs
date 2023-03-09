@@ -99,5 +99,15 @@ public class NeighboursTests
         Assert.That(this.sharpesNeighbours.IsUnvisited(6), Is.EqualTo(false));
         Assert.That(this.sharpesNeighbours.IsUnvisited(11), Is.EqualTo(false));
         Assert.That(this.sharpesNeighbours.IsUnvisited(16), Is.EqualTo(true));
+
+        this.sharpesNeighbours.Obstructed(16);
+        Assert.That(this.sharpesNeighbours.IsUnvisited(16), Is.EqualTo(false));
+        Assert.That(this.sharpesNeighbours.UnvisitedCount, Is.EqualTo(22));
+
+        this.sharpesNeighbours.Visited(12);
+        this.sharpesNeighbours.Visited(13);
+        this.sharpesNeighbours.Visited(14);
+        Assert.That(this.sharpesNeighbours.UnvisitedCount, Is.EqualTo(19));
+
     }
 }

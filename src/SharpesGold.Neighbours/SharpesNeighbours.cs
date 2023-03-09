@@ -12,10 +12,10 @@ public class SharpesNeighbours
     public SharpesNeighbours(int size)
     {
         this.Size = size;
-        this.Unvisited = Enumerable.Repeat(true, size*size).ToArray();
-        this.UnvisitedCount = size*size;
+        this.Unvisited = Enumerable.Repeat(true, size * size).ToArray();
+        this.UnvisitedCount = size * size;
     }
-    
+
     // ------------------------------------------------------------
     // For the specified node index, return all valid neighbours.
     // In this case, valid means nodes that are unvisited, inside
@@ -24,18 +24,22 @@ public class SharpesNeighbours
     public int[] Calculate(int index)
     {
         List<int> neighbors = new List<int>();
-        
+
         // NORTH?
-        if (index > this.Size) {
+        if (index > this.Size)
+        {
             int indexNorth = index - this.Size;
-            if (IsUnvisited(indexNorth)) {
+            if (IsUnvisited(indexNorth))
+            {
                 neighbors.Add(indexNorth);
             }
 
             // NORTH-EAST?
-            if ((index % this.Size) != (this.Size - 1)) {
+            if ((index % this.Size) != (this.Size - 1))
+            {
                 int indexNorthEast = indexNorth + 1;
-                if (IsUnvisited(indexNorthEast)) {
+                if (IsUnvisited(indexNorthEast))
+                {
                     neighbors.Add(indexNorthEast);
                 }
             }
@@ -47,34 +51,42 @@ public class SharpesNeighbours
         //
 
         // EAST?
-        if ((index % this.Size) != (this.Size -1)) {
+        if ((index % this.Size) != (this.Size - 1))
+        {
             int indexEast = index + 1;
-            if (IsUnvisited(indexEast)) {
+            if (IsUnvisited(indexEast))
+            {
                 neighbors.Add(indexEast);
             }
         }
 
         // SOUTHERN?
-        if (index < ((this.Size * this.Size) - this.Size)) {
+        if (index < ((this.Size * this.Size) - this.Size))
+        {
             int indexSouth = index + this.Size;
 
             // SOUTH EAST
-            if ((index % this.Size) != (this.Size -1)) {
+            if ((index % this.Size) != (this.Size - 1))
+            {
                 int indexSouthEast = indexSouth + 1;
-                if (IsUnvisited(indexSouthEast)) {
+                if (IsUnvisited(indexSouthEast))
+                {
                     neighbors.Add(indexSouthEast);
                 }
             }
 
             // SOUTH?
-            if (IsUnvisited(indexSouth)) {
+            if (IsUnvisited(indexSouth))
+            {
                 neighbors.Add(indexSouth);
             }
 
             // SOUTH-WEST?
-            if ((index % this.Size) != 0) {
+            if ((index % this.Size) != 0)
+            {
                 int indexSouthWest = indexSouth - 1;
-                if (IsUnvisited(indexSouthWest)) {
+                if (IsUnvisited(indexSouthWest))
+                {
                     neighbors.Add(indexSouthWest);
                 }
             }
@@ -82,16 +94,20 @@ public class SharpesNeighbours
         }
 
         // WEST?
-        if ((index % this.Size) != 0) {
+        if ((index % this.Size) != 0)
+        {
             int indexWest = index - 1;
-            if (IsUnvisited(indexWest)) {
+            if (IsUnvisited(indexWest))
+            {
                 neighbors.Add(indexWest);
             }
 
             // NORTH-WEST?
-            if (index > this.Size) {
+            if (index > this.Size)
+            {
                 int indexNorthWest = index - (this.Size + 1);
-                if (IsUnvisited(indexNorthWest)) {
+                if (IsUnvisited(indexNorthWest))
+                {
                     neighbors.Add(indexNorthWest);
                 }
             }
@@ -99,7 +115,7 @@ public class SharpesNeighbours
 
         return neighbors.ToArray();
     }
-    
+
     public bool IsUnvisited(int index)
     {
         // Is the node of the specified index still unvisited?
