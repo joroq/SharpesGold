@@ -47,33 +47,37 @@ public class SharpesNeighbours
         //
 
         // EAST?
-        // if (<<< Check index is not rightmost in grid (hint, NORTH-EAST?) >>>) {
-        //     int indexEast = index + 1;
-        //     if (IsUnvisited(indexEast)) {
-        //         neighbors.Add(<<< What am I adding here? >>>);
-        //     }
-        // }
+        if ((index % this.Size) != (this.Size -1)) {
+            int indexEast = index + 1;
+            if (IsUnvisited(indexEast)) {
+                neighbors.Add(indexEast);
+            }
+        }
 
         // SOUTHERN?
         if (index < ((this.Size * this.Size) - this.Size)) {
             int indexSouth = index + this.Size;
 
             // SOUTH EAST
-            // if (<<< Check index is not rightmost in grid >>>) {
-            //     int indexSouthEast = <<< To the index directly to the right of that due south >>>;
-            //     <<<
-            //       Add index for neighbour representing south east,
-            //       only if that index is unobstructed/unvisited
-            //     >>>
-            // }
+            if ((index % this.Size) != (this.Size -1)) {
+                int indexSouthEast = indexSouth + 1;
+                if (IsUnvisited(indexSouthEast)) {
+                    neighbors.Add(indexSouthEast);
+                }
+            }
 
             // SOUTH?
-            // <<<
-            //   Add index for neighbour representing due south,
-            //   only if that index is unobstructed/unvisited
-            // >>>
+            if (IsUnvisited(indexSouth)) {
+                neighbors.Add(indexSouth);
+            }
 
             // SOUTH-WEST?
+            if ((index % this.Size) != 0) {
+                int indexSouthWest = indexSouth - 1;
+                if (IsUnvisited(indexSouthWest)) {
+                    neighbors.Add(indexSouthWest);
+                }
+            }
             // <<< Include any unobstructed/unvisited neighbour to the south west >>>
         }
 
